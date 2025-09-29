@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acrostia Demo</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font  for icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
 
   <style>
@@ -32,7 +39,6 @@
 
     /* Text box on banner */
     .carousel-caption {
-      background: rgba(255, 255, 255, 0.6); /* semi-transparent box */
       padding: 20px 40px;
       border-radius: 10px;
       display: inline-block;
@@ -59,10 +65,16 @@
     
     /* Services section */
     .services-section {
-      background-color: #b64d4d;
-      color: #fff;
-      padding: 80px 0;
-    }
+  min-height: 100vh;   
+  width: 100%;         
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #b64d4d;
+  color: #fff;
+  padding: 80px 0;
+}
+
 
     .services-section h2 {
       font-size: 2.5rem;
@@ -88,6 +100,238 @@
   color: #912e2ecc; 
   font-weight: bold;
     }
+    /* ABOUT SECTION */
+.about-section {
+  background: #6c547b; 
+
+  background-image: url('images/bg3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #f1e9ef;
+  padding: 80px 0 60px;
+  position: relative;
+  text-align: center;
+}
+
+
+.about-hero h2 {
+  font-size: 56px;
+  font-weight: 300;
+  margin: 0 0 10px;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: 0.5px;
+}
+
+/* subtitle */
+.about-hero p {
+  max-width: 920px;
+  margin: 0 auto 30px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* green button with small pointer under it */
+.btn-meet {
+  background: #8bc34a;
+  color: #fff;
+  padding: 14px 38px;
+  font-weight: 700;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+.btn-meet:after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -18px;
+  border-width: 18px 18px 0;
+  border-style: solid;
+  border-color: #8bc34a transparent;
+  width: 0;
+  height: 0;
+}
+
+/* team grid */
+.team-grid {
+  margin-top: 40px;
+}
+
+/* each team card */
+.team-member {
+  background: rgba(0,0,0,0.28);
+  padding: 32px 20px;
+  border-radius: 4px;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  text-align: center;
+  color: #f7edf2;
+  position: relative;
+  overflow: visible;
+}
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.25);
+}
+
+/* photo wrapper for overlay effecct*/
+.team-photo-wrap {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 18px;
+  border: 6px solid rgba(255,255,255,0.12);
+}
+.team-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+
+
+.team-photo-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: transparent;
+  transition: background .28s ease, transform .28s ease;
+}
+.team-member:hover .team-photo-wrap::after {
+  background: rgba(231,76,60,0.45); /* red overlay */
+}
+
+/* name & role */
+.team-member h4 {
+  margin: 10px 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ecd7df;
+  text-transform: uppercase;
+}
+.team-member .role {
+  color: #b6d164; 
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+
+/* social icons row */
+.team-member .socials {
+  margin-top: 8px;
+}
+.team-member .socials a {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  margin: 0 6px;
+  font-size: 14px;
+  transition: background .2s, color .2s;
+  text-decoration: none;
+}
+.team-member .socials a:hover {
+  background: #8bc34a;
+  color: #222;
+}
+
+/* responsive spacing */
+@media (max-width: 767px) {
+  .about-hero h2 { font-size: 34px; }
+  .team-photo-wrap { width: 120px; height: 120px; }
+}
+/* MOBILE VIEW FIXES  */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    background: rgba(0, 0, 0, 0.8) !important;
+    position: fixed;
+    width: 100%;
+  }
+  .navbar .nav-link {
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Carousel text */
+  .carousel-caption h1 {
+    font-size: 1.6rem;
+  }
+  .carousel-caption h1 span {
+    font-size: 2rem;
+  }
+
+  /* Services section */
+  .services-section {
+    padding: 40px 20px;
+    height: auto;
+  }
+  .services-section h2 {
+    font-size: 2rem;
+  }
+  .services-section .card {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .service-icon {
+    width: 60px;
+  }
+
+  /* About section */
+  .about-hero h2 {
+    font-size: 32px;
+  }
+  .about-hero p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .btn-meet {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  /* Team section */
+  .team-photo-wrap {
+    width: 120px;
+    height: 120px;
+  }
+  .team-member {
+    padding: 20px 15px;
+  }
+  .team-member h4 {
+    font-size: 16px;
+  }
+  .team-member .role {
+    font-size: 12px;
+  }
+  .team-member .socials a {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+  }
+}
+#services {
+  min-height: 100vh;   /* Full screen height */
+  display: flex;
+  align-items: center; /* Vertical center */
+}
+
+
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -95,7 +339,25 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Acrostia</a>
+              <img id="fimg" src="images/logo.png" class="mx-5 px-5" alt="acrostia" style="position: absolute;padding-left: 5rem;"/>
+
+      <div class="z-3 position-absolute p-5 rounded-3">
+            <span>
+              <img
+                class="img-responsive"
+                src="images/good.png"
+                style="
+                  position: absolute;
+                  padding-top: 25em;
+                  padding-left: 20em;
+                "
+              />
+            </span>
+          </div>
+
+
+
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -117,17 +379,17 @@
       <div class="carousel-inner">
         <div class="carousel-item active" style="background-image: url('images/banner.jpg');">
           <div class="carousel-caption">
-            <h1>GOOD IDEAS comes <span>FIRST!</span></h1>
+
           </div>
         </div>
         <div class="carousel-item" style="background-image: url('images/banner1.jpg');">
           <div class="carousel-caption">
-            <h1>GOOD IDEAS comes <span>FIRST!</span></h1>
+
           </div>
         </div>
         <div class="carousel-item" style="background-image: url('images/banner2.jpg');">
           <div class="carousel-caption">
-            <h1>GOOD IDEAS comes <span>FIRST!</span></h1>
+            
           </div>
         </div>
       </div>
@@ -146,7 +408,10 @@ Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur po
       <div class="row g-4">
         <div class="col-md-3">
           <div class="card p-4 h-100">
-            <div class="icon mb-3"><i class="fa fa-lightbulb"></i></div>
+            <div class="icon mb-3"></div>
+                    <img src="images/idea.png" alt="Researching Icon" class="service-icon">
+
+
             <h4>RESEARCHING</h4>
             <p>Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
           </div>
@@ -154,7 +419,9 @@ Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur po
 
         <div class="col-md-3">
           <div class="card p-4 h-100">
-            <div class="icon mb-3"><i class="fa fa-magic"></i></div>
+            <div class="icon mb-3"></div>
+                    <img src="images/wand.png" alt="Designing Icon" class="service-icon">
+
             <h4>DESIGNING</h4>
             <p>Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore..</p>
           </div>
@@ -162,7 +429,9 @@ Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur po
 
         <div class="col-md-3">
           <div class="card p-4 h-100">
-            <div class="icon mb-3"><i class="fa fa-cogs"></i></div>
+            <div class="icon mb-3"></div>
+                    <img src="images/settings.png" alt="Development Icon" class="service-icon">
+
             <h4>DEVELOPMENT</h4>
             <p>Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore..</p>
           </div>
@@ -170,7 +439,9 @@ Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur po
 
         <div class="col-md-3">
           <div class="card p-4 h-100">
-            <div class="icon mb-3"><i class="fa fa-rocket"></i></div>
+            <div class="icon mb-3"></div>
+                    <img src="images/rocket.png" alt="Launch Icon" class="service-icon">
+
             <h4>LAUNCH</h4>
             <p>Praesent interdum blandit quam. Asunt in anim uis aute irure dolor...</p>
           </div>
@@ -178,6 +449,101 @@ Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur po
       </div>
     </div>
   </section>
+<!--ABOUT  -->
+<section id="about" class="about-section">
+  <div class= "container"></div>       
+
+    
+    <div class="about-hero">
+      <h2>Who we are &amp; what we do</h2>
+      <p>
+        Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien.
+        Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est.
+      </p>
+
+      <a class="btn-meet" href="#team">MEET THE TEAM</a>
+    </div>
+
+    <!-- team grid -->
+    <div id="team" class="team-grid container mt-5">
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="team-photo-wrap">
+              <img src="..." class="card-img-top" alt="..." />
+            </div>
+            <h4>ANTON PETROV</h4>
+            <div class="role">General manager</div>
+            <div class="socials">
+              <a href="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"><i class="fa fa-facebook-f"></i></a>
+              <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="team-photo-wrap">
+              <img src="..." class="card-img-top" alt="..." />
+            </div>
+            <h4>MARIA IVANOVA</h4>
+            <div class="role">General manager</div>
+            <div class="socials">
+              <a href="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"><i class="fa fa-facebook-f"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="team-photo-wrap">
+              <img src="..." class="card-img-top" alt="..." />
+            </div>
+            <h4>ROBERT BROWN</h4>
+            <div class="role">General manager</div>
+            <div class="socials">
+              <a href="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"><i class="fa fa-facebook-f"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="team-photo-wrap">
+              <img src="..." class="card-img-top" alt="..." />
+            </div>
+            <h4>EMILY WHITE</h4>
+            <div class="role">General manager</div>
+            <div class="socials">
+              <a href="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"><i class="fa fa-facebook-f"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--  end about  -->
+
+    
+       
+
+
+
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
